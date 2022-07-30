@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: final.aux
+The style file: agufull08.bst
+Database file #1: finalNotes.bib
+Database file #2: final.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--there's a number but no volume in Altena2018
+You've used 30 entries,
+            3076 wiz_defined-function locations,
+            1312 strings with 17283 characters,
+and the built_in function-call counts, 30837 in all, are:
+= -- 3198
+> -- 1310
+< -- 9
++ -- 537
+- -- 367
+* -- 2132
+:= -- 3070
+add.period$ -- 30
+call.type$ -- 30
+change.case$ -- 127
+chr.to.int$ -- 31
+cite$ -- 31
+duplicate$ -- 3336
+empty$ -- 1713
+format.name$ -- 466
+if$ -- 6094
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 360
+newline$ -- 97
+num.names$ -- 120
+pop$ -- 1187
+preamble$ -- 1
+purify$ -- 97
+quote$ -- 0
+skip$ -- 1646
+stack$ -- 0
+substring$ -- 1217
+swap$ -- 2830
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 270
+warning$ -- 1
+while$ -- 164
+width$ -- 0
+write$ -- 364
+(There was 1 warning)

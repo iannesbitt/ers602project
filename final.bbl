@@ -1,0 +1,212 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Altena et~al.}(2018)\textit{Altena, Scambos, Fahnestock, and
+  K{\"{a}}{\"{a}}b}}]{Altena2018}
+Altena, B., T.~Scambos, M.~Fahnestock, and A.~K{\"{a}}{\"{a}}b (2018),
+  {Extracting recent short-term glacier velocity evolution over Southern Alaska
+  from a large collection of Landsat data}, \textit{The Cryosphere
+  Discussions}, (May), 1--27, \doi{10.5194/tc-2018-66}.
+
+\bibitem[{\textit{Berger and Spotila}(2008)}]{Berger2008}
+Berger, A.~L., and J.~A. Spotila (2008), {Denudation and deformation in a
+  glaciated orogenic wedge: The St. Elias orogen, Alaska}, \textit{Geology},
+  \textit{36}(7), 523--526, \doi{10.1130/G24883A.1}.
+
+\bibitem[{\textit{{Boldt Love} et~al.}(2016)\textit{{Boldt Love}, Hallet,
+  Pratt, and O'Neel}}]{Boldt2016}
+{Boldt Love}, K., B.~Hallet, T.~L. Pratt, and S.~O'Neel (2016), {Observations
+  and modeling of fjord sedimentation during the 30 year retreat of Columbia
+  Glacier, AK}, \textit{Journal of Glaciology}, \textit{62}(234), 778--793,
+  \doi{10.1017/jog.2016.67}.
+
+\bibitem[{\textit{Christeson et~al.}(2010)\textit{Christeson, Gulick, van
+  Avendonk, Worthington, Reece, and Pavlis}}]{Christeson2010}
+Christeson, G.~L., S.~P. Gulick, H.~J. van Avendonk, L.~L. Worthington, R.~S.
+  Reece, and T.~L. Pavlis (2010), {The Yakutat terrane: Dramatic change in
+  crustal thickness across the transition fault, Alaska}, \textit{Geology},
+  \textit{38}(10), 895--898, \doi{10.1130/G31170.1}.
+
+\bibitem[{\textit{Cloos}(1993)}]{Cloos1993}
+Cloos, M. (1993), {Lithospheric buoyancy and collisional orogenesis: Subduction
+  of oceanic plateaus, continental margins, island arcs, spreading ridges, and
+  seamounts}, \textit{Geological Society of America Bulletin}, \textit{105}(6),
+  715, \doi{10.1130/0016-7606(1993)105<0715:LBACOS>2.3.CO;2}.
+
+\bibitem[{\textit{Elmore et~al.}(2013)\textit{Elmore, Gulick, Willems, and
+  Powell}}]{Elmore2013}
+Elmore, C.~R., S.~P.~S. Gulick, B.~Willems, and R.~Powell (2013), {Seismic
+  stratigraphic evidence for glacial expanse during glacial maxima in the
+  Yakutat Bay Region, Gulf of Alaska}, \textit{Geochemistry, Geophysics,
+  Geosystems}, \textit{14}(4), 1294--1311, \doi{10.1002/ggge.20097}.
+
+\bibitem[{\textit{Enkelmann et~al.}(2008)\textit{Enkelmann, Garver, and
+  Pavlis}}]{Enkelmann2008}
+Enkelmann, E., J.~I. Garver, and T.~L. Pavlis (2008), {Rapid exhumation of
+  ice-covered rocks of the Chugach-St. Elias orogen, Southeast Alaska},
+  \textit{Geology}, \textit{36}(12), 915, \doi{10.1130/G2252A.1}.
+
+\bibitem[{\textit{Enkelmann et~al.}(2009)\textit{Enkelmann, Zeitler, Pavlis,
+  Garver, and Ridgway}}]{Enkelmann2009}
+Enkelmann, E., P.~K. Zeitler, T.~L. Pavlis, J.~I. Garver, and K.~D. Ridgway
+  (2009), {Intense localized rock uplift and erosion in the St Elias orogen of
+  Alaska}, \textit{Nature Geoscience}, \textit{2}(5), 360--363,
+  \doi{10.1038/ngeo502}.
+
+\bibitem[{\textit{Enkelmann et~al.}(2015)\textit{Enkelmann, Koons, Pavlis,
+  Hallet, Barker, Elliott, Garver, Gulick, Headley, Pavlis, Ridgway, Ruppert,
+  and {Van Avendonk}}}]{Enkelmann2015}
+Enkelmann, E., P.~O. Koons, T.~L. Pavlis, B.~Hallet, A.~Barker, J.~Elliott,
+  J.~I. Garver, S.~P.~S. Gulick, R.~M. Headley, G.~L. Pavlis, K.~D. Ridgway,
+  N.~Ruppert, and H.~J.~A. {Van Avendonk} (2015), {Cooperation among tectonic
+  and surface processes in the St. Elias Range, Earth's highest coastal
+  mountains}, \textit{Geophysical Research Letters}, \textit{42}(14),
+  5838--5846, \doi{10.1002/2015GL064727}.
+
+\bibitem[{\textit{Fastook and Chapman}(1989)}]{Fastook1989}
+Fastook, J., and J.~Chapman (1989), {A map-plane finite-element model: three
+  modeling experiments}, \textit{Journal of Glaciology}, \textit{35}(119).
+
+\bibitem[{\textit{Gulick et~al.}(2007)\textit{Gulick, Lowe, Pavlis, Gardner,
+  and Mayer}}]{Gulick2007}
+Gulick, S.~P., L.~A. Lowe, T.~L. Pavlis, J.~V. Gardner, and L.~A. Mayer (2007),
+  {Geophysical insights into the Transition fault debate: Propagating strike
+  slip in response to stalling Yakutat block subduction in the Gulf of Alaska},
+  \textit{Geology}, \textit{35}(8), 763, \doi{10.1130/G23585A.1}.
+
+\bibitem[{\textit{Gulick et~al.}(2015)\textit{Gulick, Jaeger, Mix, Asahi,
+  Bahlburg, Belanger, Berbel, Childress, Cowan, Drab, Forwick, Fukumura, Ge,
+  Gupta, Kioka, Konno, LeVay, M{\"{a}}rz, Matsuzaki, McClymont, Moy,
+  M{\"{u}}ller, Nakamura, Ojima, Ribeiro, Ridgway, Romero, Slagle, Stoner,
+  St-Onge, Suto, Walczak, Worthington, Bailey, Enkelmann, Reece, and
+  Swartz}}]{Gulick2015}
+Gulick, S. P.~S., J.~M. Jaeger, A.~C. Mix, H.~Asahi, H.~Bahlburg, C.~L.
+  Belanger, G.~B.~B. Berbel, L.~Childress, E.~Cowan, L.~Drab, M.~Forwick,
+  A.~Fukumura, S.~Ge, S.~Gupta, A.~Kioka, S.~Konno, L.~J. LeVay, C.~M{\"{a}}rz,
+  K.~M. Matsuzaki, E.~L. McClymont, C.~Moy, J.~M{\"{u}}ller, A.~Nakamura,
+  T.~Ojima, F.~R. Ribeiro, K.~D. Ridgway, O.~E. Romero, A.~L. Slagle, J.~S.
+  Stoner, G.~St-Onge, I.~Suto, M.~D. Walczak, L.~L. Worthington, I.~Bailey,
+  E.~Enkelmann, R.~Reece, and J.~M. Swartz (2015), {Mid-Pleistocene climate
+  transition drives net mass loss from rapidly uplifting St. Elias Mountains,
+  Alaska}, \textit{Proceedings of the National Academy of Sciences},
+  \textit{112}(49), 15,042--15,047, \doi{10.1073/pnas.1512549112}.
+
+\bibitem[{\textit{Hanson and Simon}(2001)}]{Hanson2001}
+Hanson, G.~J., and A.~Simon (2001), {Erodibility of cohesive streambeds in the
+  loess area of the midwestern USA}, \textit{Hydrological Processes},
+  \textit{15}(1), 23--38, \doi{10.1002/hyp.149}.
+
+\bibitem[{\textit{Herman et~al.}(2015)\textit{Herman, Beyssac, Brughelli, Lane,
+  Leprince, Adatte, Lin, Avouac, and Cox}}]{Herman2015}
+Herman, F., O.~Beyssac, M.~Brughelli, S.~N. Lane, S.~Leprince, T.~Adatte,
+  J.~Y.~Y. Lin, J.-P. Avouac, and S.~C. Cox (2015), {Erosion by an Alpine
+  glacier}, \textit{Science}, \textit{350}(6257), 193--195,
+  \doi{10.1126/science.aab2386}.
+
+\bibitem[{\textit{Hooke and Fastook}(2007)}]{Hooke2007}
+Hooke, R.~L., and J.~Fastook (2007), {Thermal conditions at the bed of the
+  Laurentide ice sheet in Maine during deglaciation: implications for esker
+  formation}, \textit{Journal of Glaciology}, \textit{53}(183), 646--658,
+  \doi{10.3189/002214307784409243}.
+
+\bibitem[{\textit{Hooyer et~al.}(2012)\textit{Hooyer, Cohen, and
+  Iverson}}]{Hooyer2012}
+Hooyer, T.~S., D.~Cohen, and N.~R. Iverson (2012), {Control of glacial
+  quarrying by bedrock joints}, \textit{Geomorphology}, \textit{153-154},
+  91--101, \doi{10.1016/j.geomorph.2012.02.012}.
+
+\bibitem[{\textit{Humphrey and Raymond}(1994)}]{Humphrey1994}
+Humphrey, N.~F., and C.~F. Raymond (1994), {Hydrology, erosion and sediment
+  production in a surging glacier: Variegated Glacier, Alaska, 1982–83},
+  \textit{Journal of Glaciology}, \textit{40}(136), 539--552,
+  \doi{10.3189/S0022143000012429}.
+
+\bibitem[{\textit{Iverson}(2012)}]{Iverson2012}
+Iverson, N.~R. (2012), {A theory of glacial quarrying for landscape evolution
+  models}, \textit{Geology}, \textit{40}(8), 679--682, \doi{10.1130/G33079.1}.
+
+\bibitem[{\textit{Johnson and Fastook}(2002)}]{Johnson2002}
+Johnson, J., and J.~L. Fastook (2002), {Northern Hemisphere glaciation and its
+  sensitivity to basal melt water}, \textit{Quaternary International},
+  \textit{95}(96), 65--74, \doi{10.1016/S1040-6182(02)00028-9}.
+
+\bibitem[{\textit{Kleman et~al.}(2002)\textit{Kleman, Fastook, and
+  Stroeven}}]{Kleman2002}
+Kleman, J., J.~Fastook, and A.~P. Stroeven (2002), {Geologically and
+  geomorphologically constrained numerical model of Laurentide Ice Sheet
+  inception and build-up}, \textit{Quaternary International}, \textit{95-96},
+  87--98, \doi{10.1016/S1040-6182(02)00030-7}.
+
+\bibitem[{\textit{Koons et~al.}(2010)\textit{Koons, Hooks, Pavlis, Upton, and
+  Barker}}]{Koons2010}
+Koons, P.~O., B.~P. Hooks, T.~L. Pavlis, P.~Upton, and A.~D. Barker (2010),
+  {Three-dimensional mechanics of Yakutat convergence in the southern Alaskan
+  plate corner}, \textit{Tectonics}, \textit{29}(4),
+  \doi{10.1029/2009TC002463}.
+
+\bibitem[{\textit{Koons et~al.}(2013)\textit{Koons, Upton, Roy, and
+  Tucker}}]{Koons2013}
+Koons, P.~O., P.~Upton, S.~G. Roy, and G.~E. Tucker (2013), {Linking Earth and
+  Atmosphere at Higher Frequencies with the Failure Earth Response Model}, in
+  \textit{American Geophysical Union, Fall Meeting 2013, abstract id.
+  EP44A-08}, San Francisco, CA.
+
+\bibitem[{\textit{Marechal et~al.}(2015)\textit{Marechal, Mazzotti, Elliott,
+  Freymueller, and Schmidt}}]{Marechal2015}
+Marechal, A., S.~Mazzotti, J.~L. Elliott, J.~T. Freymueller, and M.~Schmidt
+  (2015), {Indentor-corner tectonics in the Yakutat-St. Elias collision
+  constrained by GPS}, \textit{Journal of Geophysical Research: Solid Earth},
+  \textit{120}(5), 3897--3908, \doi{10.1002/2014JB011842}.
+
+\bibitem[{\textit{Montelli et~al.}(2017)\textit{Montelli, Gulick, Worthington,
+  Mix, Davies-Walczak, Zellers, and Jaeger}}]{Montelli2017}
+Montelli, A., S.~P. Gulick, L.~L. Worthington, A.~Mix, M.~Davies-Walczak, S.~D.
+  Zellers, and J.~M. Jaeger (2017), {Late Quaternary glacial dynamics and
+  sedimentation variability in the Bering Trough, Gulf of Alaska},
+  \textit{Geology}, \textit{45}(3), 251--254, \doi{10.1130/G38836.1}.
+
+\bibitem[{\textit{Riihimaki et~al.}(2005)\textit{Riihimaki, MacGregor,
+  Anderson, Anderson, and Loso}}]{Riihimaki2005}
+Riihimaki, C.~A., K.~R. MacGregor, R.~S. Anderson, S.~P. Anderson, and M.~G.
+  Loso (2005), {Sediment evacuation and glacial erosion rates at a small alpine
+  glacier}, \textit{Journal of Geophysical Research}, \textit{110}(F3),
+  F03,003, \doi{10.1029/2004JF000189}.
+
+\bibitem[{\textit{Roy et~al.}(2015)\textit{Roy, Koons, Upton, and
+  Tucker}}]{Roy2015}
+Roy, S.~G., P.~O. Koons, P.~Upton, and G.~E. Tucker (2015), {The influence of
+  crustal strength fields on the patterns and rates of fluvial incision},
+  \textit{Journal of Geophysical Research: Earth Surface}, \textit{120}(2),
+  275--299, \doi{10.1002/2014JF003281}.
+
+\bibitem[{\textit{Sheaf et~al.}(2003)\textit{Sheaf, Serpa, and
+  Pavlis}}]{Sheaf2003}
+Sheaf, M.~A., L.~Serpa, and T.~L. Pavlis (2003), {Exhumation rates in the St.
+  Elias Mountains, Alaska}, \textit{Tectonophysics}, \textit{367}(1-2), 1--11,
+  \doi{10.1016/S0040-1951(03)00124-0}.
+
+\bibitem[{\textit{Sklar and Dietrich}(2001)}]{Sklar2001}
+Sklar, L.~S., and W.~E. Dietrich (2001), {Sediment and rock strength controls
+  on river incision into bedrock}, \textit{Geology}, \textit{29}(12), 1087,
+  \doi{10.1130/0091-7613(2001)029<1087:SARSCO>2.0.CO;2}.
+
+\bibitem[{\textit{Spotila et~al.}(2004)\textit{Spotila, Buscher, Meigs, and
+  Reiners}}]{Spotila2004}
+Spotila, J.~A., J.~T. Buscher, A.~J. Meigs, and P.~W. Reiners (2004),
+  {Long-term glacial erosion of active mountain belts: Example of the
+  Chugach–St. Elias Range, Alaska}, \textit{Geology}, \textit{32}(6), 501,
+  \doi{10.1130/G20343.1}.
+
+\bibitem[{\textit{Stock et~al.}(2005)\textit{Stock, Montgomery, Collins,
+  Dietrich, and Sklar}}]{Stock2005}
+Stock, J.~D., D.~R. Montgomery, B.~D. Collins, W.~E. Dietrich, and L.~Sklar
+  (2005), {Field measurements of incision rates following bedrock exposure:
+  Implications for process controls on the long profiles of valleys cut by
+  rivers and debris flows}, \textit{Geological Society of America Bulletin},
+  \textit{117}(1), 174, \doi{10.1130/B25560.1}.
+
+\end{thebibliography}

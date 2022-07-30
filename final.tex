@@ -1,0 +1,278 @@
+\documentclass[twocolumn]{aastex6}
+\usepackage[cmex10]{amsmath}
+\usepackage{kantlipsum,graphicx,mfirstuc,bold-extra}
+\usepackage{natbib}
+
+\journalinfo{Geodynamics ERS 602---Nesbitt}
+
+\begin{abstract}
+	The St. Elias Mountains of southeastern Alaska, one of the highest coastal mountain ranges in the world, are also home to some of the world's highest exhumation rates. High precipitation, topographic relief, and mildly cold mean annual temperatures allow the St. Elias to host one of the largest volumes of continental, sub-arctic ice in the world. This ice comprises the remnants of the ancestral Cordilleran Ice Sheet. Understanding the landscape change caused by past and present ice masses in this region is crucial to understanding the region's tectonic evolution. This study uses ice velocity and internal cohesive strength of geologic material to inform estimates of erosion rate and volume over two time scales that differ by two orders of magnitude. We find that glaciers account for an average of $\sim$5 mm yr$^{-1}$ of erosion in the St. Elias from 2013-2017; a value that nearly doubles during the 2013-2014 surge of Bering Glacier. Glaciers and ice sheets cause an average of 15-20 mm yr$^{-1}$ of erosion in the region since 115 kya, and erosion nearly doubled during the last glacial maximum (LGM) $\sim$18 kya. 60\% of exhumation is occurring at elevations below 2000 m above mean sea level. In total, 4.3 $*$ 10$^6$ km$^3$ ($\sim$1.6 km) has been exhumed from the orogen over the last 115 ka. We also report results from projects that used these outcomes to drive their models. Although the calculated erosion rates are corroborated by sedimentation rates in the Gulf of Alaska, spatial variance estimates of erosion could be significantly improved by using a computational method that more accurately represents the physical forces driving glacial erosion.
+\end{abstract}
+
+\begin{document}
+	\bibliographystyle{agufull08}
+	
+	\title{\textsc{\lowercase{\capitalisewords{Estimating Quaternary} glacial erosion in the \capitalisewords{St. Elias Mountains, Alaska}}}}
+	\author{Ian M. Nesbitt*}
+	\author{William H. Kochtitzky}
+	\affiliation{Geodynamics Numerical Modeling Laboratory \\
+		School of Earth and Climate Sciences, University of Maine}
+	\date{\today}
+
+	\maketitle
+
+
+	\section{Introduction}
+		The St. Elias Mountain Range of Alaska and western Canada (Fig. \ref{f:location}) is the highest coastal mountain range in the world, and has near world-record uplift rates. The region's cool, wet climate promotes erosion that matches or exceeds uplift, and proximity of the range to the Gulf of Alaska allows for efficient removal of eroded sediment from the interior of the Yakutat terrane \citep{Enkelmann2015,Gulick2015}. Warm-based glaciers are the primary drivers of erosion in the region, covering more than 50\% of the orogen (see Fig. \ref{f:location}). Examining the relationship between glaciers and the silicate earth in the St. Elias is essential to the understanding the interplay of forces responsible for shaping the landscape of the region.
+		
+	\subsection{Goals}
+		Erosion directly links atmospheric and subsurface processes. The goal of this study is to estimate how both modern and late Quaternary glacial erosion vary over space and time. A secondary aim of the project is to provide model initialization parameters to two other groups: a silicate earth tectonophysics group, and a group investigating the effects of glacial loading and unloading on fault locking and unlocking behavior.
+
+		\begin{figure}[t]
+			\epsscale{1.15}
+			\plotone{location.png}
+			\centering
+			\caption{\label{f:location} Satellite imagery and ocean floor hillshade of the study area, with glacial extent highlighted in blue.}
+		\end{figure}
+
+		Previous studies report rapid exhumation of material from the Yakutat plate \citep{Sheaf2003,Spotila2004,Enkelmann2008,Berger2008,Enkelmann2009,Enkelmann2015} and the coupling of atmospheric, surficial, and deep earth processes in the region \citep{Elmore2013,Enkelmann2015,Gulick2015,Montelli2017}. This study estimates glacial erosion in the region using simplified modeling methods on two timescales, in the modern era and over the last 115 kya.
+		
+		Together, these three groups (tectonophysics, glacial erosion, glacial fault locking) form the basis for a unified numerical model linking tectonic forces, ice, and erosion in the St. Elias.
+
+
+		\begin{figure*}[tb]
+			\gridline{\fig{vector.png}{\textwidth}{(a)}}
+			\gridline{
+				\fig{raster300m.png}{0.49\textwidth}{(b)}
+				\fig{raster4000m.png}{0.49\textwidth}{(c)}}
+			\caption{\label{f:cohesion} Modeled internal cohesion vector of geologic units in Alaska and western Canada, with $(a)$ faults highlighted in red, and plate information and velocity specified \citep{Christeson2010,Marechal2015}, $(b)$ same data converted to extent of modern dataset at 300 m$^2$ px$^{-1}$ \citep{Altena2018}, and $(c)$ same data converted to extent of UMISM-derived dataset at approximately 4000 m$^2$ px$^{-1}$ (Annie Boucher, pers. comm.). All frames in this figure are projected in Albers Equal Area conic coordinate system.}
+		\end{figure*}
+		
+	\subsection{Tectonics}
+		The Yakutat microplate is colliding with the North American continent at about 50 mm yr$^{-1}$ \citep{Marechal2015}. This collision causes significant faulting and uplift in the study area. The tectonophysics group's goal is to reproduce the uplift rates and physical features of the orogen using a 2-dimensional \textsc{Comsol} model with prescribed boundary conditions informed using the outcome of this study.
+		
+		This study provided the tectonophysics group a relationship of area-averaged erosion as a function of elevation in the St. Elias, which was then used as topographic control for the crust of their model.
+		
+	\subsection{Glacial control of seismicity}
+		
+		Loading and unloading of material causes changes in the internal stress and deformation of that material. Accordingly, the unloading of thick sections of glacial ice causes seismic activity in earth's crust. The glacial fault locking group's goal is to model the effect of ice loading on the frequency and magnitude of earthquakes. They hypothesize that removing thick ($>1$km) ice caps, such as happened during the latest Pleistocene in the Malaspina region of Alaska, causes a change in the log-log frequency-magnitude relationship of low-magnitude earthquakes. They also believe this amount of glacial unloading could hasten the release of built-up stress on locked faults, leading to the initiation of larger magnitude events.
+
+		Our aim was to provide the glacial fault locking group with $a)$ ice thickness and $b)$ erosion volume during the late Quaternary.
+
+
+	\section{Methods}
+		We use two main datasets to estimate erosion in this study: ice velocity and material cohesion.
+		
+	\subsection{Ice velocity}
+		This study uses a portion of the University of Maine Ice Sheet Model (UMISM) as the basis of ice velocity and extent to drive the long-term model \citep{Fastook1989,Johnson2002,Kleman2002,Hooke2007}. UMISM estimates Cordilleran ice extent over 232 time steps during the past 115 ka, at approximately 4 km spatial and 500 yr temporal resolution.
+		
+		We also use monthly resolution ice velocity data from 2013-2017 to drive the model of modern erosion (Bas Altena, pers. comm.; \citealt{Altena2018}). \citet{Altena2018} use machine learning feature tracking software to convert Landsat 8 data at 32-day temporal resolution to monthly velocity fields.
+
+		The traditionally accepted model of velocity-driven erosion is from a study of the surge-type Variegated Glacier in Southeast Alaska in the eastern end of the study area \citep{Humphrey1994}. This study establishes a linear relationship between sliding speed and sediment output \eqref{eq:ersn}
+		
+		\begin{equation} \label{eq:ersn}
+			e = k * v
+		\end{equation}
+		
+		\noindent where $e$ is erosion in cubic meters per time, $v$ is velocity in meters per time, and $k$ is dimensionless erodibility. In this model we assume $k$ is inversely related to cohesive strength \eqref{eq:erod}
+		
+		\begin{equation} \label{eq:erod}
+			k = \frac{0.2}{c ^ {t}} * K\textsubscript{g}
+		\end{equation}
+		
+		\noindent where $c$ is cohesive strength in megapascals, and $t$ and $K\textsubscript{g}$ are constants.
+		
+		Since erosion is difficult to observe subglacially, this study must rely on fluvial erosion literature to inform the relationship between cohesive strength and erodibility beneath ice cover. Some researchers report that $t = 2$ \citep{Sklar2001,Stock2005}. However, since the dominant subglacial erosion mechanism is thought to be quarrying rather than abrasion (see \citealt{Iverson2012,Hooyer2012}), internal cohesive strength has less effect on total erosion because quarrying takes advantage of macro-scale fracture and joint orientation caused by, for example, depressurization associated with exhumation. We use $t = 0.5$, a value used in the fluvial realm \citep{Hanson2001,Roy2015}. Unlike studies conducted in regions of homogeneous rock material, southeast Alaska is a region dominated by heterogeneity. Using a lower value of $t$ allows for a reduction of influence of internal rock strength on the model in such a region. Use of a lower value of $t$ mutes the transition of erodibility between spatially adjacent rock strengths, and shifts the dominant influence of the model to ice velocity.
+		
+		\citet{Humphrey1994} report a dimensionless, nonlinear erosion constant $K\textsubscript{g}$, meant to scale erodibility to vertical distance over time. This number is generally accepted as $K\textsubscript{g} = 10^{-4}$ m s$^{-1}$ \citep{Humphrey1994}. Several other studies (eg. \citealt{Riihimaki2005,Herman2015}) use this constant in various glacial settings. \citet{Riihimaki2005} and \citet{Herman2015} both use this value in alpine basins with homogeneous bedrock type. It is important to note that this value is a fudge factor which ignores much of the physical processes at work (see discussion in section \ref{txt:Kg}). We choose to use this value despite our study area being much larger and more geologically complex than either of the above studies.		
+
+	\subsection{Assignment of cohesion values}
+		Alaska, Yukon, and British Columbia (B.C.) all have independent geologic maps, which means when they are merged, the geologic interpretations at their borders tend to differ as often as they match up.
+
+	%% The values (usually only l,r and c) in the last part of
+	%% \begin{deluxetable}{} command tell LaTeX how many columns
+	%% there are and how to align them.
+	\begin{deluxetable}{lc}
+	
+		%% Keep a portrait orientation
+	
+		%% Over-ride the default font size
+		%% Use Default (12pt)
+	
+		%% Use \tablewidth{?pt} to over-ride the default table width.
+		%% If you are unhappy with the default look at the end of the
+		%% *.log file to see what the default was set at before adjusting
+		%% this value.
+
+		%% This is the title of the table.
+		\tablecaption{Internal cohesive strength $c$ associated with geologic designation\label{t:strength}}
+	
+		%% This command over-rides LaTeX's natural table count
+		%% and replaces it with this number.  LaTeX will increment 
+		%% all other tables after this table based on this number
+		\tablenum{1}
+	
+		%% The \tablehead gives provides the column headers.  It
+		%% is currently set up so that the column labels are on the
+		%% top line and the units surrounded by ()s are in the 
+		%% bottom line.  You may add more header information by writing
+		%% another line between these lines. For each column that requries
+		%% extra information be sure to include a \colhead{text} command
+		%% and remember to end any extra lines with \\ and include the 
+		%% correct number of &s.
+		\tablehead{\colhead{Map unit} & \colhead{Cohesive strength} \\ 
+			\colhead{} & \colhead{(MPa)} }
+		
+		%% All data must appear between the \startdata and \enddata commands
+		\startdata
+		Unconsolidated deposits & 0.1-0.3 \\
+		Water (unmapped) & 0.3 \\
+		Fault gouge, 300m$^2$ pixel & 0.1$x$\tablenotemark{a} \\
+		Fault gouge, 4000m$^2$ pixel & 0.9$x$\tablenotemark{b} \\
+		Mudstone & 0.8 \\
+		Shale & 1-2 \\
+		Sandstone & 3 \\
+		Volcanic & 3-5 \\
+		Schist & 5 \\
+		Shallow intrusives & 5 \\
+		Marble / limestone & 8-15 \\
+		Unspecified metamorphics & 15 \\
+		Mafic / ultramafic & 30 \\
+		Granite / plutonic & 30 \\
+		Diorite & 30 \\
+		High-grade metamorphics & 40-50 \\
+		Orthogneiss & 50 \\
+		\enddata
+	
+		%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+		%% or \tablecomments{text} between the \enddata and 
+		%% \end{deluxetable} commands
+		\tablenotetext{\tiny a}{Fault gouge strength in 300m$^2$ px$^{-1}$ cohesion model was determined by multiplying 0.1 times the strength of the parent material, $x$.}
+		\tablenotetext{\tiny b}{Fault gouge strength in 4000m$^2$ px$^{-1}$ cohesion model was determined by multiplying 0.9 times the strength of the parent material, $x$.}
+		
+		%% General table comment marker
+		% \tablecomments{Fault gouge strength was determined by applying linear function to the strength of the parent material, $x$.}
+		
+		%% General table references marker
+		\tablerefs{P. Koons, pers. comm.}
+		
+	\end{deluxetable}
+
+		We merged the Alaska, British Columbia, and Yukon Territory geologic vector maps, then assigned cohesion values to certain rock types according to the strengths reported in Table \ref{t:strength}. After value assignments, we converted vector polygons to raster using nearest neighbor sampling for two image sizes: 461x360 for the swath of the region represented by the larger, long-term UMISM model, and 1544x1081 for the smaller, higher resolution modern model of \citet{Altena2018}. Pixel sizes are approximately 4000m$^2$ px$^{-1}$ for the UMISM-derived data, and exactly 300m$^2$ px$^{-1}$ for the modern model (Fig. \ref{f:cohesion}).
+
+		\citet{Roy2015} report that fractures and joints ``can reduce tensile strength almost completely,'' especially for brecciated fault gouge material. The results of prolonged glaciation of quaternary age fault gouges is clear in the St. Elias, where the Fairweather-Queen Charlotte fault system is nearly continuously occupied by ice fields and outlet glaciers, and accordingly these fault-adjacent areas display some of the fastest exhumation rates in the world \citep{Sheaf2003,Spotila2004,Enkelmann2008,Berger2008,Enkelmann2009,Elmore2013,Enkelmann2015}. To attempt to incorporate the effects of the damage zone model reported in \citet{Roy2015}, faults in this cohesion model are treated differently based on the cell size of the cohesion raster being used (see Table \ref{t:strength}, notes \textsuperscript{a} and \textsuperscript{b}). Existing cohesion values in smaller (300m$^2$) pixels are reduced by a greater amount than in large (4000m$^2$) pixels due to the relative area of fault damage per pixel. We assigned a value of 0.3 to areas with no data, such as beneath large water bodies. This is an attempt to estimate cohesion of both riverine floodplains and the huge amounts of Pleistocene glacial shelf sediment in the Gulf of Alaska.
+
+		We made calculations using \textsc{Matlab} script for 45 modern timesteps (monthly, November 2013 - October 2017) and 232 Quaternary timesteps (115 - 0 kya in 0.5 ka steps). Outputs were saved as low-frames per second movies, color maps, and line graphics.
+
+	\section{Results}
+		
+		The two models are in general agreement on the rate and volume of erosion in the modern and recent past, to within an order of magnitude (Fig. \ref{f:erosmod}, Fig. \ref{f:eroslgm}). The ice draining south towards the Gulf of Alaska did the vast majority of the erosive work in both models, both in terms of total volume exhumed and in rate per area. The modern model shows a greater percentage of the total erosive work being done in the north-draining watersheds than the LGM model, however this difference is within the range of modeling error. 
+		
+		\begin{figure}[t]
+			\epsscale{1.15}
+			\plotone{eros-modern.png}
+			\centering
+			\caption{\label{f:erosmod} Monthly area-averaged erosion rate in mm yr$^{-1}$ (top) and total eroded volume in km$^3$ yr $^{-1}$ (bottom) from Nov 2013 to October 2017. The effect on erosion due to seasonal change in ice velocity, and the surge of Bering Glacier in the late fall and winter of 2013 are both evident.}
+		\end{figure}
+		
+		\begin{figure}[t]
+			\epsscale{1.15}
+			\plotone{eros-lgm.png}
+			\centering
+			\caption{\label{f:eroslgm} 500-yr mean erosion rate in mm yr$^{-1}$ (top) and average eroded volume in km$^3$ yr$^{-1}$ (bottom) from 115 kya to 0 kya. Note that the vast majority of material removed by volume is from the part of the orogen that drains south to the Gulf of Alaska. The spike effect of the LGM is evident at around 18-17 kya.}
+		\end{figure}
+		
+		\begin{figure}[t]
+			\epsscale{1.17}
+			\plotone{eros-201312.png}
+			\plotone{eros-201412.png}
+			\caption{\label{f:eros1314} Log scale color map representation of instantaneous erosion rate in mm yr$^{-1}$ in December 2013 and December 2014. Note the effect on erosion due to the surge of Bering Glacier between 6 and $7 * 10^5$ easting between 2013 and 2014.}
+		\end{figure}
+		
+		\begin{figure}[b]
+			\epsscale{1.17}
+			\plotone{eros-17kya.png}
+			\centering
+			\caption{\label{f:eros17kya} Linear color map of 500 yr area-averaged erosion rate in mm yr$^{-1}$ at 17 kya, the LGM. Erosion rate is plotted on a linear scale. Erosion is concentrated in discrete ice streams which do the bulk of the erosive work in the model. All ice in the model is grounded.}
+		\end{figure}
+
+		\begin{figure*}[tb]
+			%			\epsscale{1.1}
+			%			\centering
+			%			\plottwo{vertstrain3ma.png}{eros-elev.png}
+			\gridline{\fig{topo3ma.png}{0.5\textwidth}{(a)}
+				\fig{eros-elev.png}{0.5\textwidth}{(b)}}
+			\gridline{\fig{uplift3ma.png}{0.5\textwidth}{(c)}
+				\fig{vertstrain3ma.png}{0.5\textwidth}{(d)}}
+			\caption{\label{f:vstrain} Results of erosion and subduction modeling plotted along a SW-NE transect across the Yakutat-North American orogen at the 3 Ma time step. Plotted here are $(a)$ model surface elevation, $(b)$ glacial erosion binned as a function of elevation and reported as elevation average (top) and total (bottom) per bin, $(c)$ vertical uplift rate at the surface after erosion was applied, and $(d)$ the vertical component of strain in color scale and arrow surface. Glacial erosion as a function of elevation is a model result of this study and a polynomial representation of the binned data represented in the top graph of $(d)$ was used to force the tectonophysics model.}
+		\end{figure*}
+		
+		\begin{figure*}[tb]
+			\centering
+			%			\epsscale{1.17}
+			%			\plotone{strain.png}
+			%			\plottwo{strainbefore.png}{strainafter.png}
+			\gridline{\fig{strainbefore.png}{0.57\textwidth}{(a)}
+				\fig{strainafter.png}{0.428\textwidth}{(b)}}
+			\caption{\label{f:strain} Modeled crustal strain beneath Malaspina Glacier region $(a)$ before and $(b)$ after glacial unloading. This model was sped up by six orders of magnitude to decrease processing time, therefore reported strain is 6 orders of magnitude higher in the model than in the earth's crust. Therefore, blue in this model represents 7.25 $*$ 10$^{-16}$ s$^{-1}$ and red represents 4 $*$ 10$^{-12}$ s$^{-1}$. Note that strain is shifted from the slope of the orogen to the forebasin after ice is removed.}
+		\end{figure*}
+
+	\subsection{Glacial erosion}
+	\subsubsection{Modern (2013 - 2017 CE)}
+		This model suggests an annual mean of 5 mm yr$^{-1}$ ($\sim$15.5 mm total), or about 0.3 km$^3$ yr$^{-1}$ (0.8 km$^3$ total) of area-averaged erosion occurred in the 45 months covered by the dataset (Fig. \ref{f:erosmod}). Of the $\sim$0.8 km$^3$ eroded over that time, 0.1 km$^3$ was in north-draining watersheds, and 0.7 km$^3$ was from areas that drain directly to the Gulf of Alaska. This suggests that the majority of glacial erosion in the region is centered on the northern part of the Yakutat block. Exhumation rate appears to vary seasonally; as ice velocity increases in the winter, so too does erosion. Additionally, specific traceable events, like the 2013-14 surge of Bering Glacier, also increase modeled erosion (Fig. \ref{f:eros1314}).
+
+	\subsubsection{Late Quaternary (115 - 0 kya)}
+		The UMISM-based erosion model suggests a mean of 14 mm yr$^{-1}$ of area-averaged erosion occurred during the last 115 ka (Fig. \ref{f:eros17kya}). In total, we find that 1.6 km of area-averaged erosion (4.3 $*$ 10$^6$ km$^3$) has occurred over the last 115 ka, a value that seems to support young fission track ages such as those found by \citet{Berger2008} and \citet{Enkelmann2009}. Exhumation increases with ice volume, as healthy ice sheets tend to flow faster (eg. during LGM and pre-LGM events). This model shows other minor glacial maxima, such as an event at $\sim$62 kya and pulses at $\sim$30 kya and $\sim$25 kya. The LGM time step (Fig. \ref{f:eros17kya}) shows erosion concentrated beneath ice streams, which terminate near the continental shelf slope.
+
+	\subsection{Tectonics}
+		Erosion in the tectonic model was forced using the results from the glacial erosion model. The tectonic modeling group found that the orogeny produced about 6 $*$ 10$^3$ m of relief at the start of the model. However with erosion applied, the elevation along the inside of the orogen decreased 2 $*$ 10$^3$ m over the course of 3 Ma (Fig. \ref{f:vstrain}a). The erosion applied was a polynomial function based on the elevation average erosion calculated in this study (Fig. \ref{f:vstrain}b).
+		
+		The model shows that vertical strain and uplift become concentrated in two places: one just inboard of the slab hinge due to crustal shortening, and another further inland in response to slab buoying of overlying crust from below (Fig. \ref{f:vstrain}c, d).
+
+	\subsection{Glacial control of seismicity}
+		Unloading ice and geologic material from the Yakutat region has the effect of altering the seismic frequency-magnitude relationship. When ice retreats, normal stress is reduced but compressive stress remains the same, which in turn allows strain rate to spike (Fig. \ref{f:strain}). Typically, the frequency-magnitude scale is curved with a maximum at about M 1.4. However the increase in strain with the removal of ice causes an increase in both frequency and magnitude of earthquakes, centering the maximum of the frequency-magnitude slightly higher, and increasing the frequency of quakes.
+		
+		Due to its higher density, unloading of earth material has a far greater control on altering strain rates in the earth's crust than unloading of ice. Since the LGM, there has been a greater mass of ice lost than earth material from the Yakutat block. Therefore any alteration in the frequency-magnitude relationship seen today is likely in response to ice removal rather than exhumation and export of earth material.
+
+	\section{Discussion}
+		There is generally good agreement between erosion derived from the modeled (LGM) and measured (modern) datasets, and the models do tend to predict what we expect: that erosion is higher in higher velocity areas. This is not surprising given that we assume the mechanisms driving erosion are internal cohesion and velocity. Findings from the other groups were also positive.
+
+		The glacial fault locking group found that erosion is more effective at inducing strain than the removal of ice from the surface. Their results support the hypothesis that ice mass loss changes the frequency-magnitude relationship of seismicity in the crust. However, erosion of large volumes of material from a landscape in a short period of time must have a greater effect. The period from 30-18 kya, in which erosion averaged $\sim$25 mm yr$^{-1}$, ice sheets likely removed about 300 m of surface material from this region over the course of 12 ky, the equivalent of $\sim$0.8 km of ice. This period ended at the LGM, when UMISM suggests ice mass decreased from $\sim$1.2 to 0 km across the southern parts of the orogen, and 1.3 km to 0.3 km in the Malaspina piedmont region. This type of rapid unloading likely caused a spike in seismicity during and immediately following the collapse of the Cordilleran Ice Sheet. This spike in seismicity was likely made more severe by the erosion of the previous 12 ky.
+
+		The modern model shows increased erosion percentage at elevations <1000 m compared to the UMISM model (Fig. \ref{f:erosmod}b). Additionally, the modern model reports a greater percentage of erosion at high elevations >1000 m compared to the total volume eroded (Fig. \ref{f:eroslgmbin}). This is significant because it demonstrates the continued ability of ice to exhume the orogen as it uplifts.
+
+		\begin{figure}[tb]
+			\epsscale{1.17}
+			\plotone{eros-elev.png}
+			\centering
+			\caption{\label{f:eroslgmbin}Average glacial erosion in the last 115 ky binned as a function of elevation and reported as elevation average (top) and total (bottom) per bin.}
+		\end{figure}
+
+		Overall, we found that the orogen has been exhumed by some 1.6 km in the past 115 ky. This value is likely an underestimate, since it is averaged across the entire ice extent region. Some areas are likely to exhume much faster given ice flow through narrow troughs, and given fault zone weakness. For example, the Bagley Ice Field area and downstream Bering Glacier are positioned atop a large Quaternary-age fault zone and are likely downcutting far faster than some of the surrounding glaciers. Seward Throat, the ice stream feeding ice to the Malaspina Piedmont, exhibits some of the highest ice velocities in Alaska and according to our model is responsible for a large portion of the overall glacial erosion in the region. Locally, these two regions should display the fastest exhumation, and indeed \citet{Berger2008} suggest this may be true. However, the fact that erosion appears to be at its fastest in recent geologic time \citep{Spotila2004} suggests that glaciation may only have initiated in the Quaternary.
+
+		According to the subduction tectonics group, the tectonic model's subducted slab appears to initiate the beginnings of tectonic aneurysm described in \citet{Koons2010,Koons2013} without the need for increased heat flow beneath the orogen (Fig. \ref{f:vstrain}d). This is due to the low density ascribed to the slab to simulate young, relatively buoyant oceanic crust being subducted beyond isostatic depth (see \citealt{Cloos1993}).
+
+		The subduction tectonics group hypothesized that they would end up with steady-state topography prior to the end of their model run. However, the model ended up predicting the orogen losing 2 km of relief fairly steadily over the course of 3 Ma. If we assume the elevation profile should be in approximate equilibrium over the length of the Quaternary glaciation (roughly 2 Ma), then either the subduction model is under-predicting uplift or our model is over-predicting erosion. Although we feel confident that our model is at least within range of being able to produce sediment volumes reported by geophysical studies in the Gulf of Alaska \citep{Sheaf2003,Gulick2007,Boldt2016,Montelli2017}, it has important flaws and results from it should therefore be viewed with caution.
+
+	\subsection{Problems}\label{ss:problems}
+		One obvious problem is reconciling geologic map data across political boundaries. Canadian geological surveys go to the trouble of interpolating bedrock type beneath glaciers, whereas the American side's glaciers are mapped as a distinct geologic unit. Our to solve this by interpolating beneath the ice ourselves is subject to order-of-magnitude scale errors. Rather than drawing straight lines from one side of the ice to the other, we tried to use evidence from topography and glacial coverage to infer underlying lithologic change. For example, where ice was obviously constricted into discretized streams we interpreted as less erodible, and where it opened into wide ice fields or piedmont, we interpreted as more susceptible to erosion.
+	
+		In several places, lithologic interpretations reported on the vector maps do not align across political boundaries. We used our best judgment as to which interpretation might be correct, then manually adjusted the adjacent erroneous polygon to better reflect geologic unit continuity. Generally, these errors were associated with interpretation of surficial valley fill units in one political region versus bedrock across the border. More often than not, we revised units with less cohesive strength upward in the hopes that this would better reflect the internal strength of the underlying bedrock. However, many of these valleys could contain a considerable amount of unconsolidated material and thus interpretation of bedrock-scale cohesive strength could overestimate by a factor of 10$^1$ MPa or more.
+		
+		However there is a more complex issue stemming from methods used in this study. Relying on velocity and erodibility to calculate erosion volume completely ignores most of the physical forces doing the work to actually erode. Equation \eqref{eq:erod} simply scales erosion per cell based on velocity using $K\textsubscript{g}$\label{txt:Kg}. At its most basic, $K\textsubscript{g}$ is a linear vertical velocity used to take the place of physical modeling of material failure at the bed. Properly modeling erosion would involve calculating exceedance of critical stress at the bed and valley walls given ice flow. A better erosion model would incorporate not only internal cohesion of bedrock material but the effect of orographic sinuosity on quarrying and abrasion near valley walls.
+
+	\subsection{Future work}
+		Although in this study the group did not have time to transition to a model that was more representative of the physical forces at work, we recommend future work focus on replicating this study using a failure earth response physics solver \citep{Koons2013}.
+
+	\section{Conclusions}
+		Regardless of the success or failure of this model to reproduce exhumation reported by other studies, it is not designed to approximate the physical forces at work at the bed and therefore incapable of physically sound erosion modeling. It is a first-order approximation at best, and thus regardless of its outcome, should be improved upon in the future using finite element physics-based failure response modeling.
+
+	\acknowledgements
+	\section*{Acknowledgements}
+		Profuse thanks are due to Bas Altena, who provided St. Elias glacier velocity data prior to its publication, and to Annie Boucher, who provided data from her ongoing Master's work. We would like to thank Kate, Clara, James, and Jesse, and the other inhabitants of the numerical modeling lab, for their cooperation in creating cross-informed models. Thank you also to Peter Koons, who provided cohesion data and valuable constructive criticism. Typeset using AAS\TeX\ 6.1.
+
+	\bibliography{final}
+	
+\end{document}
+
+
